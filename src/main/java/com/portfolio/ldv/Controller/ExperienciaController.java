@@ -47,8 +47,8 @@ public class ExperienciaController {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         if(experienciaService.existsByNombreE(expDto.getNombreE()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
-        
-        Experiencia experiencia = new Experiencia(expDto.getNombreE(), expDto.getDescripcionE());
+        //Se le agregaron las fechas de ingreso y egreso
+        Experiencia experiencia = new Experiencia(expDto.getNombreE(), expDto.getDescripcionE(), expDto.getFechaIngreso(), expDto.getFechaEgreso());
         experienciaService.save(experiencia);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -70,6 +70,8 @@ public class ExperienciaController {
         Experiencia experiencia = experienciaService.getOne(id).get();
         experiencia.setNombreE(expDto.getNombreE());
         experiencia.setDescripcionE(expDto.getDescripcionE());
+        experiencia.setFechaIngreso(expDto.getFechaIngreso());
+        experiencia.setFechaEgreso(expDto.getFechaEgreso());
         
         experienciaService.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
