@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.portfolio.ldv.LdvApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.923 s <<< FAILURE! - in com.portfolio.ldv.LdvApplicationTests
-contextLoads  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'conversionServicePostProcessor' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.beans.factory.config.BeanFactoryPostProcessor]: Factory method 'conversionServicePostProcessor' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/security/converter/RsaKeyConverters
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.beans.factory.config.BeanFactoryPostProcessor]: Factory method 'conversionServicePostProcessor' threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/security/converter/RsaKeyConverters
-Caused by: java.lang.NoClassDefFoundError: org/springframework/security/converter/RsaKeyConverters
-Caused by: java.lang.ClassNotFoundException: org.springframework.security.converter.RsaKeyConverters
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.37 s - in com.portfolio.ldv.LdvApplicationTests

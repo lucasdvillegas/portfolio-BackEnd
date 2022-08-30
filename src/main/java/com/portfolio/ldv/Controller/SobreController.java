@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/sobre")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://argprograma-frontendldv.web.app")
 public class SobreController {
     @Autowired
     ImpSobreService sobreService;
