@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/sobre")
-@CrossOrigin(origins = "https://argprograma-frontendldv.web.app")
+@CrossOrigin(origins = "https://incomparable-froyo-0c5121.netlify.app")
 public class SobreController {
     @Autowired
     ImpSobreService sobreService;
